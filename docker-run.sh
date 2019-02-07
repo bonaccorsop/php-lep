@@ -10,4 +10,4 @@ docker run --rm \
 -e "PHP_ERRORREPORTING=E_ALL" \
 -v $(pwd)/:/app/code \
 --name lep73 \
-bonaccorsop/php:lep-7.3
+bonaccorsop/php-lep:7.3

@@ -16,20 +16,19 @@ docker run --rm \
 -e "MY_ENVIRONMENT=develop" \
 -v .../host-code-path/:/app/code \
 --name my-lep-container \
-bonaccorsop/php:lep-7.3
+bonaccorsop/php-lep:7.3
 ```
 
 using the docker-compose file:
 ```
-version: '2'
+version: '3'
 services:
     app-node-name:
-        image: bonaccorsop/php:lep-7.3
+        image: bonaccorsop/php-lep:7.3
         ports:
             - "8080:80"
         volumes:
             - ./:/app/code
-        working_dir: /app/code
         environment:
             APP_CWD:  /app/code
             VHOST_ROOT:  /app/code/public
